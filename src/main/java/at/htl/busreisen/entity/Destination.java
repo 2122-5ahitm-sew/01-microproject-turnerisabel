@@ -1,13 +1,26 @@
 package at.htl.busreisen.entity;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Objects;
 
-public class Destination {
+@Entity
+public class Destination extends PanacheEntityBase {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
+
     public String street;
+
     public String streetNo;
+
     public String place;
+
     public int zip;
 
     public Destination() {
