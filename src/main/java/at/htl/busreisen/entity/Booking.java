@@ -15,8 +15,8 @@ public class Booking extends PanacheEntityBase {
     @ManyToOne
     public Person person;
 
-    // @ManyToOne
-    //public Trip trip;
+    @ManyToOne
+    public Trip trip;
 
     public Booking() {
     }

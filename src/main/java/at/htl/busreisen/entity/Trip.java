@@ -1,11 +1,21 @@
 package at.htl.busreisen.entity;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+
+import javax.persistence.*;
 import java.util.Objects;
 
-public class Trip {
+@Entity
+public class Trip extends PanacheEntityBase {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
+
+    @ManyToOne
     public Destination destination;
+
+    @ManyToOne
     public Bus bus;
 
     public Trip() {
