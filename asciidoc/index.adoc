@@ -1,5 +1,10 @@
 # Busreisen
 
+## Description
+---
+In diesem Projekt geht es um das Buchen einer Reise mit einem Bus.
+Personen können einen Trip buchen. Ein Trip hat einen Bus mit mehreren Personen und geht zu einem bestimmten Ort.
+
 ## CLD
 ---
 image::../images/cld.png[]
@@ -7,3 +12,4 @@ image::../images/cld.png[]
 
 ## GH-Pages
 ---
+http://turnerisabel.github.io/01-microproject-turnerisabel/
