@@ -32,9 +32,9 @@ class Booking {
   - trip: Trip
 }
 
-Trip  --> "1" Destination : Reise geht nach >
-Trip --> "1" Bus : Reise wird mit Bus durchgeführt >
-Booking --> "1" Trip : hat Buchungen <
-Person "1" <--  Booking : bucht eine Reise (Trip) >
+Trip  "*" --> "1" Destination : Reise geht nach >
+Trip "1" --> "1" Bus : Reise wird mit Bus durchgeführt >
+Booking "*" --> "1" Trip : hat Buchungen <
+Person "*" <-- "1"  Booking : bucht Reise (Trip) >
 
 @enduml
