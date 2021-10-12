@@ -17,7 +17,7 @@ public class Destination extends PanacheEntityBase {
 
     public String street;
 
-    public String streetNo;
+    public int streetNo;
 
     public String place;
 
@@ -26,7 +26,7 @@ public class Destination extends PanacheEntityBase {
     public Destination() {
     }
 
-    public Destination(String street, String streetNo, String place, int zip) {
+    public Destination(String street, int streetNo, String place, int zip) {
         this.street = street;
         this.streetNo = streetNo;
         this.place = place;
