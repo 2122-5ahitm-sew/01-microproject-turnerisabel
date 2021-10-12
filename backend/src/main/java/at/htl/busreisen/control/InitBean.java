@@ -1,4 +1,4 @@
 package at.htl.busreisen.control;
 
-public class InitBean{
+public class InitBean {
 }
