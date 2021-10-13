@@ -1,9 +1,7 @@
 package at.htl.busreisen.boundary;
 
 import at.htl.busreisen.control.DestinationRepository;
-import at.htl.busreisen.entity.Bus;
 import at.htl.busreisen.entity.Destination;
-import org.apache.maven.lifecycle.internal.LifecycleStarter;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
