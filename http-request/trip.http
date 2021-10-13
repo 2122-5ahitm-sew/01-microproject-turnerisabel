@@ -1,0 +1,23 @@
+GET localhost:8080/api/trip
+
+###
+GET localhost:8080/api/trip/getById/1
+
+###
+POST localhost:8080/api/bus/create
+Content-Type: application/json
+
+{
+  "destination": "Wunderland",
+  "bus": 1
+}
+
+###
+PUT localhost:8080/api/trip/updateById
+Content-Type: application/json
+
+{
+  "id": 1,
+  "destination": "Wunderland",
+  "bus": 1
+}
