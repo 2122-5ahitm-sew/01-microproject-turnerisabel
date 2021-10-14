@@ -12,7 +12,7 @@ public class Trip extends PanacheEntityBase {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     public Destination destination;
 
     @ManyToOne

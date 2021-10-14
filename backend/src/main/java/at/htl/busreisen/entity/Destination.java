@@ -2,6 +2,7 @@ package at.htl.busreisen.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
+import javax.json.bind.annotation.JsonbProperty;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +18,7 @@ public class Destination extends PanacheEntityBase {
 
     public String street;
 
+    @JsonbProperty("street_no")
     public int streetNo;
 
     public String place;

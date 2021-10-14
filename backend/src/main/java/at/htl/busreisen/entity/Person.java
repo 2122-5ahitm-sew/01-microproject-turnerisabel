@@ -2,6 +2,8 @@ package at.htl.busreisen.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
+import javax.json.bind.annotation.JsonbProperty;
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.*;
 import java.util.Objects;
 
@@ -11,8 +13,14 @@ public class Person extends PanacheEntityBase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
+
+    @JsonbProperty("first_name")
     public String firstName;
+
+    @JsonbProperty("last_name")
     public String lastName;
+
+    @JsonbProperty("tel_nr")
     public String telNr;
 
     @ManyToOne(cascade = CascadeType.MERGE)

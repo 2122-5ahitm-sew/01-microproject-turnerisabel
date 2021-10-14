@@ -3,6 +3,7 @@ package at.htl.busreisen.boundary;
 import at.htl.busreisen.control.BusRepository;
 import at.htl.busreisen.entity.Bus;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @Path("bus")
 @Produces(MediaType.APPLICATION_JSON)
+@RequestScoped
 public class BusService {
 
     @Inject

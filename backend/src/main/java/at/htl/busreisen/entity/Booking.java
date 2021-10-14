@@ -21,8 +21,9 @@ public class Booking extends PanacheEntityBase {
     public Booking() {
     }
 
-    public Booking(Person person) {
+    public Booking(Person person, Trip trip) {
         this.person = person;
+        this.trip = trip;
     }
 
     @Override

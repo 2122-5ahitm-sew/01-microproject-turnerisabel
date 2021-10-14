@@ -1,8 +1,13 @@
 package at.htl.busreisen.boundary;
 
 import at.htl.busreisen.control.BookingRepository;
+import at.htl.busreisen.control.PersonRepository;
+import at.htl.busreisen.control.TripRepository;
 import at.htl.busreisen.entity.Booking;
+import at.htl.busreisen.entity.Person;
+import at.htl.busreisen.entity.Trip;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
@@ -12,10 +17,17 @@ import java.util.List;
 
 @Path("booking")
 @Produces(MediaType.APPLICATION_JSON)
+@RequestScoped
 public class BookingService {
 
     @Inject
     BookingRepository repository;
+
+    @Inject
+    TripRepository tripRepository;
+
+    @Inject
+    PersonRepository personRepository;
 
     @GET
     public List<Booking> getAllBookings() {
@@ -41,6 +53,16 @@ public class BookingService {
     @Path("create")
     @Consumes(MediaType.APPLICATION_JSON)
     public Booking createBooking(Booking booking) {
+        Trip trip = tripRepository.findById(booking.trip.id);
+        if (trip != null) {
+            booking.trip = trip;
+        }
+
+        Person person = personRepository.findById(booking.person.id);
+        if (person != null) {
+            booking.person = person;
+        }
+
         repository.persist(booking);
         return booking;
     }

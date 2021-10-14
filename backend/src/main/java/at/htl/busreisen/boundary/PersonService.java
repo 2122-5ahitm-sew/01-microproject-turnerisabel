@@ -3,6 +3,7 @@ package at.htl.busreisen.boundary;
 import at.htl.busreisen.control.PersonRepository;
 import at.htl.busreisen.entity.Person;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
@@ -10,8 +11,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("passenger")
+@Path("person")
 @Produces(MediaType.APPLICATION_JSON)
+@RequestScoped
 public class PersonService {
 
     @Inject

@@ -1,0 +1,31 @@
+GET localhost:8080/api/booking
+
+###
+GET localhost:8080/api/booking/getById/1
+
+###
+POST localhost:8080/api/booking/create
+Content-Type: application/json
+
+{
+  "person": {
+    "id": 1
+  },
+  "trip": {
+    "id": 1
+  }
+}
+
+###
+PUT localhost:8080/api/booking/updateById
+Content-Type: application/json
+
+{
+  "id": 1,
+  "person": {
+    "id": 1
+  },
+  "trip": {
+    "id": 1
+  }
+}
