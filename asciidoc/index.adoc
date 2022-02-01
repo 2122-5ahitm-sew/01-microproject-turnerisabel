@@ -3,7 +3,17 @@
 ## Description
 ---
 In diesem Projekt geht es um das Buchen einer Reise mit einem Bus.
-Personen können einen Trip buchen. Ein Trip hat einen Bus mit mehreren Personen und geht zu einem bestimmten Ort.
+
+Personen können einen Trip buchen.
+
+Ein Trip hat einen Bus mit mehreren Personen und fährt zu einem bestimmten Ort.
+
+
+## Zusammenfassung
+- Quarkus Backend (mit Swagger)
+- Panache
+- Quarkus Security
+
 
 ## CLD
 ---
