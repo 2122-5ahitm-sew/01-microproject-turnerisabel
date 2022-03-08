@@ -2,6 +2,7 @@ package at.htl.busreisen.boundary;
 
 import at.htl.busreisen.control.BusRepository;
 import at.htl.busreisen.entity.Bus;
+import io.quarkus.grpc.GrpcService;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -11,9 +12,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("bus")
-@Produces(MediaType.APPLICATION_JSON)
-@RequestScoped
+@GrpcService
 public class BusService {
 
     @Inject
