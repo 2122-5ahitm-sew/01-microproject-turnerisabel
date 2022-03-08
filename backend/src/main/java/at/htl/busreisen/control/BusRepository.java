@@ -8,3 +8,5 @@ import javax.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public class BusRepository implements PanacheRepository<Bus> {
 }
+
+
